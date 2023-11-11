@@ -29,5 +29,7 @@ public abstract class Tag {
                 .map(entry -> " " + entry.getKey() + "=" + "\"" + entry.getValue() + "\"")
                 .collect(Collectors.joining());
     }
+
+    //everything is fucking fine
 }
 // END
