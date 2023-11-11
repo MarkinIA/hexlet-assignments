@@ -25,9 +25,12 @@ public abstract class Tag {
     }
 
     public String getValues() {
-        return values.entrySet().stream()
-                .map(entry -> " " + entry.getKey() + "=" + "\"" + entry.getValue() + "\"")
-                .collect(Collectors.joining());
+        if (!values.isEmpty()) {
+            return values.entrySet().stream()
+                    .map(entry -> " " + entry.getKey() + "=" + "\"" + entry.getValue() + "\"")
+                    .collect(Collectors.joining());
+        }
+        return "";
     }
 
     //everything is fucking fine
