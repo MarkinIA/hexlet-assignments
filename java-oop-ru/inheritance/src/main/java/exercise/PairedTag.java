@@ -11,8 +11,7 @@ public class PairedTag extends Tag{
     private String body;
     private List<Tag> simpleTags = new ArrayList<>();
     public PairedTag(String tag, Map<String, String> values, String body, List<Tag> simpleTags) {
-        setTag(tag);
-        setValues(values);
+        super(tag, values);
         this.body = body;
         this.simpleTags.addAll(simpleTags);
     }

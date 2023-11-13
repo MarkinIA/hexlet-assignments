@@ -1,8 +1,6 @@
 package exercise;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Map;
 
@@ -12,14 +10,10 @@ public abstract class Tag {
     private String tag;
     private Map<String, String> values = new LinkedHashMap<>();
 
-    public void setTag(String tag) {
+    public Tag(String tag, Map<String, String> values) {
         this.tag = tag;
+        this.values = values;
     }
-
-    public void setValues(Map<String, String> values) {
-        this.values.putAll(values);
-    }
-
     public String getTag() {
         return tag;
     }
@@ -32,7 +26,5 @@ public abstract class Tag {
         }
         return "";
     }
-
-    //everything is fucking fine
 }
 // END
